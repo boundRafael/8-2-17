@@ -1,0 +1,63 @@
+.block{
+    position: relative;
+}
+    .deleteIcon {
+        position: absolute
+        margin-left;
+        margin-top:5px;
+        color:#000000
+    }
+    .camera{
+        display: inline-block;
+        float: left;
+        color:  #F1FFFD;
+        
+       
+        
+    }
+    
+       .gam{
+           width:230% !important;  
+height : 120% !important;  
+max-width: 100px !important;  //any size
+max-height: 100px !important; 
+       } 
+    .cam{
+   width:230% !important;  
+height : 120% !important;  
+max-width: 100px !important;  //any size
+max-height: 100px !important; 
+}
+    .albums{
+        display: inline-block;
+        float: right;
+      
+
+    }
+    .buttons{
+        margin-top: -70px;
+        z-index: 100;
+        margin-left: 20px;
+        margin-right: 20px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+margin-bottom: 40px;
+padding-bottom: 20px;
+
+
+
+    }
+    #map{
+        height: 100%;
+        width: 100%;
+    }
+     .color{
+    background-color: #F1FFFD;
+     }
+.hex{
+    background-color: #F1FFFD
+}
+.gallery1{
+    margin-bottom: 30px;
+    
+}

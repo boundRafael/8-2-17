@@ -1,0 +1,83 @@
+.gallery{
+        line-height:50px;
+        margin-top:140%;
+        margin-right:0%;
+    display: inline-block;
+         }
+    .photos{
+        
+        background-color:#71C0B4;
+        color: white;
+        height: 60px;
+        width: 80%;
+        text-align: center;
+        padding-top: 20px;
+        border-radius: 20px;
+        margin-top: 20px;
+        margin-left: 10%;
+    }
+    .color {
+        background-color: #D7FFF9;
+    }
+       p {
+  font-size: 30px;
+  margin-top: -10px;
+}
+    .body {
+    font: 100% ;
+    }
+.alert{
+     
+    display: inline-block;
+    font-size: 30px;
+    float: right;
+}
+.trash{
+     font-size: 30px;
+    float: left;
+
+}
+.report{
+
+        display: inline-block;
+        float: right;
+       font-size: 30px;
+       padding-top: 0px;
+       padding-right: 80px;
+       
+}
+.deleteIcon{
+     display: inline-block;
+        float: left;
+    font-size: 30px;
+    background-color: #71C0B4;
+    height: 45px;
+    width: 200px;
+  background-position: center;
+    border-radius: 20%;
+border-radius: 20px;
+padding-top: 9px;
+padding-left: 80px
+}
+.class{
+        background-color: #71C0B4;
+    height: 45px;
+    width: 200px;
+  background-position: center;
+    border-radius: 20%;
+border-radius: 20px
+}
+.help{
+    color: white;
+    display: inline-block;
+    background-color: #71C0B4;
+     height: 45px;
+    width: 200px;
+     border-radius: 20%;
+border-radius: 20px;
+padding-left: 30px;
+padding-right: 30px;
+padding-top: 7px;
+margin-left: 15%;
+
+}
