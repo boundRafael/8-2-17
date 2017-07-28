@@ -17,8 +17,11 @@ import { ReportPage } from '../report/report';
 })
 export class GalleryPage {
 public photos: any;
+
+public pic:any;
 public base64Image : string;
   constructor(public navCtrl: NavController, public navParams: NavParams, private camera: Camera, private alertCtrl: AlertController) {
+    this.pic = this.navParams.data[0]
   }
 showProfilePage() {
     this.navCtrl.push(ReportPage);
