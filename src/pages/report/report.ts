@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-
+import { AlertController } from 'ionic-angular';
 /**
  * Generated class for the ReportPage page.
  *
@@ -14,12 +14,19 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class ReportPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ReportPage');
   }
 
-
+showAlert() {
+    let alert = this.alertCtrl.create({
+      title: 'Report Sent',
+      subTitle: 'A local animal control is on the way',
+      buttons: ['OK']
+    });
+    alert.present();
+  }
 }

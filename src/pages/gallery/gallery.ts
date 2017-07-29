@@ -4,6 +4,8 @@ import { NavController, NavParams } from 'ionic-angular';
 import {AlertController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { ReportPage } from '../report/report';
+import { ToastController } from 'ionic-angular';
+
 /**
  * Generated class for the GalleryPage page.
  *
@@ -20,9 +22,10 @@ public photos: any;
 
 public pic:any;
 public base64Image : string;
-  constructor(public navCtrl: NavController, public navParams: NavParams, private camera: Camera, private alertCtrl: AlertController) {
+  constructor( private toastCtrl: ToastController, public navCtrl: NavController, public navParams: NavParams, private camera: Camera, private alertCtrl: AlertController) {
     this.pic = this.navParams.data[0]
   }
+  
 showProfilePage() {
     this.navCtrl.push(ReportPage);
 
@@ -84,5 +87,20 @@ deletePhoto(index){
     });
     confirm.present();
   }
+  
+presentToast() {
+  let toast = this.toastCtrl.create({
+    message: 'User was added successfully',
+    duration: 9000,
+    position: 'bottom'
+  });
+
+  toast.onDidDismiss(() => {
+    console.log('Dismissed toast');
+  });
+
+  toast.present();
+}
 //this.photos.splice(index, 1);
 }
+

@@ -15,19 +15,22 @@
        
         
     }
-    
+   
        .gam{
-           width:230% !important;  
-height : 120% !important;  
-max-width: 100px !important;  //any size
-max-height: 100px !important; 
+           width:35% !important;  
+height : 35% !important;  
+max-width: 35px !important;  //any size
+max-height: 35px !important; 
+margin-left: 227px;
        } 
     .cam{
-   width:230% !important;  
-height : 120% !important;  
-max-width: 100px !important;  //any size
-max-height: 100px !important; 
-}
+           width:40% !important;  
+height : 40% !important;  
+max-width: 40px !important;  //any size
+max-height: 40px !important; 
+margin-bottom: 3px;
+
+    }
     .albums{
         display: inline-block;
         float: right;
@@ -35,7 +38,8 @@ max-height: 100px !important;
 
     }
     .buttons{
-        margin-top: -70px;
+           margin-top: -550px;
+
         z-index: 100;
         margin-left: 20px;
         margin-right: 20px;

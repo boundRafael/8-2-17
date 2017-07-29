@@ -1,40 +1,30 @@
 .time{
     padding-top: 15px;
      color:     #71C0B4;
-    font-size: 20px;
+    font-size: 18px;
   position: relative;
   text-align: center;
 
 }
 .date{
    color:     #71C0B4;
-    font-size: 20px;
+    font-size: 18px;
   position: relative;
   text-align: center;
 }
-.dog{
-    background-color:   #71C0B4;
-    color: white;
-    height: 46px;
-    width: 90px;
-    font-size: 25px;
-    vertical-align: middle;
-border-radius: 12%;
-border-radius: 5px;
-display:inline-block;
-margin-left: 28px;
-}
+
 .cat{
     background-color:   #71C0B4;
     color: white;
-    height: 46px;
+    height: 36px;
     width: 90px;
     font-size: 25px;
 vertical-align: middle;
 border-radius: 12%;
 border-radius: 5px;
-margin-left:50px;
+text-align: center;
 display:inline-block;
+margin-left: 25px;
 }
 .message{
     color: white;
@@ -55,15 +45,15 @@ margin-bottom: 10px;
     padding: 10px;
     
 text-align: center;
-background-color: #71C0B4;
-margin-top: -15px;
-height: 125px;
+margin-top: -72px;
+
+height: 100px;
 margin-bottom: 10px;
 
 }
 .send{
     color: white;
-    background-color: #71C0B4;
+     background-color: #71C0B4;
     font-size: 20px;
     height: 50px;
     width: 200px;
@@ -74,37 +64,36 @@ margin-bottom: 10px;
         border-radius: 12%;
     border-radius: 25px;
  position: absolute;
- margin-bottom: 20px;
+ margin-top: -30px;
+     margin-top: 50px;
 
 }
-.input{
-    color: #71C0B4;
-    margin-top: 1px;
-    font-size: 20px;
-    height: 100px;
-    width: 260px;
-    align-content: center;
-    position: relative;
-    text-align: center;
-    
-   
-}
+
 .input2{
-  color: #71C0B4;
+    margin-top: 60px;
+    font-size: 5px;
+    color: #71C0B4;
+ 
     font-size: 20px;
-    height: 100px;
+    height: 70px;
     width: 260px;
+
     align-content: center;
     position: relative;
     text-align: center;
-    margin-top: 0px;
-   
+  border-color: #71C0B4;
+  
+
+    
+    border-radius: 0px;
 }
 .condition{
     color: #71C0B4;
     font-size: 20px;
     text-align: center;
-    padding-top: 15px;
+    padding-top: 35px;
+
+   
 }
 .sendTo{
     
@@ -112,4 +101,51 @@ margin-bottom: 10px;
     font-size: 20px;
   position: relative;
   text-align: center;
+}
+.Injured{
+    color: #71C0B4;
+    margin-left: 55px;
+    
+    margin-bottom: -124px;
+        margin-top: -26px;
+
+    
+    
+}
+.Danger{
+    padding-top: 30px;
+    color: #71C0B4;
+    padding-bottom: 40px;
+     margin-left: 46px;
+     margin-top: 120px;
+}
+   
+ .title2{
+       color: #71C0B4;
+       font-size: 15px;
+       position: relative;
+
+    }
+    
+    .label{
+       color:  white;
+font-size: 15px;
+background-color: #71C0B4;
+border-radius: 12%;
+border-radius: 5px;
+text-align: center;
+
+    }
+.one{
+    color: #71C0B4;
+    
+    margin-top:12px;
+    font-size: 18px;
+    text-align: center;
+}
+.two{
+     font-size: 18px;
+     color: #71C0B4;
+      margin-top:12px;
+      text-align: center;
 }

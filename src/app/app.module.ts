@@ -12,6 +12,8 @@ import { MapPage } from '../pages/map/map';
 import { GalleryPage } from '../pages/gallery/gallery';
 import { ReportPage } from '../pages/report/report';
 import  { CameraPage } from '../pages/camera/camera';
+
+import {FileTransfer} from '@ionic-native/file-transfer';
 @NgModule({
   declarations: [
     MyApp,
@@ -40,7 +42,8 @@ import  { CameraPage } from '../pages/camera/camera';
  GoogleMaps,
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler}, 
+    FileTransfer
   ]
 })
 export class AppModule {}

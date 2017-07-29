@@ -1,34 +1,104 @@
 <ion-header>
 
   <ion-navbar color="cool">
-    <ion-title>Alert</ion-title>
+    <ion-title>Report</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content  padding>
-<p class="time">
+ <p class="time">
   542 W Colden Ave 
 </p>
   <p class="date">
   3:30:27
   </p>
-<button ion-button class="dog"> Dog </button>
-<button ion-button class="cat"> Cat </button>
+ <ion-row radio-group>
+ 
+
+      <ion-col>
+          <ion-label class="cat"> Dog <ion-radio class="label1" value="Hello"> </ion-radio></ion-label>
+        
+      
+      </ion-col>
+
+      <ion-col>
+  
+          <ion-label class="cat"> Cat  <ion-radio class="label2" value="hello"> </ion-radio></ion-label>
+          
+      
+      </ion-col>
+
+  </ion-row>
 <p class="condition">
-Condition
+Description
 </p>
-<p class="message">
 
-  <input class="input" type="text" name="Condition" value="">
-</p>
-<p class="sendTo">
-  Send To...
-</p>
-<p class="message2">
+
+
+
+<!-- <button ion-button small class="yesInjured"> 1 </button> -->
+
+<ion-list >
+  <ion-row radio-group>
+ <ion-col>
+         <div class="two">
+  Injured
+</div>
+
+      
+      </ion-col>
+
+      <ion-col>
+          <ion-label class="label"> Yes <ion-radio class="label" value="Hello" > </ion-radio></ion-label>
+        
+      
+      </ion-col>
+
+      <ion-col>
+          <ion-label class="label"> No  <ion-radio class="label" value="hello"> </ion-radio></ion-label>
+          
+      
+      </ion-col>
+
+  </ion-row>
+     <ion-row radio-group>
+ <ion-col>
+   <div class="one">
+         Dangerous
+         </div>
+
+      
+      </ion-col>
+
+      <ion-col>
+          <ion-label class="label2"> Yes <ion-radio class="label" value="Hello"> </ion-radio></ion-label>
+        
+      
+      </ion-col>
+
+      <ion-col>
+  
+          <ion-label class="label2"> No  <ion-radio class="label" value="hello"> </ion-radio></ion-label>
+          
+      
+      </ion-col>
+
+  </ion-row>
+</ion-list>
+
+<br><br>
+ 
+<!-- <button ion-button small class="noInjured"> 2 </button>
+
+<button ion-button small class="Yes2"> 3 </button>
+<div>
+<button ion-button small class="No2"> 4 </button>
+</div> -->
+
+ <p class="message2">
   <input class="input2" type="text" name="Send" value="">
-   </p>
-
-<button ion-button small class="send"> Send Alert </button>
+   </p> 
+<button ion-button small class="send" (click)="showAlert()"> Send Alert </button>
 </ion-content>
