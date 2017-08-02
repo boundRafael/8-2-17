@@ -21,14 +21,19 @@
 height : 35% !important;  
 max-width: 35px !important;  //any size
 max-height: 35px !important; 
-margin-left: 227px;
+margin-right: 10px;
+ float: right;
+ padding-bottom: 3px;
+
        } 
     .cam{
            width:40% !important;  
 height : 40% !important;  
 max-width: 40px !important;  //any size
 max-height: 40px !important; 
-margin-bottom: 3px;
+ margin-left: 10px;
+ float: left;
+
 
     }
     .albums{
@@ -64,4 +69,8 @@ padding-bottom: 20px;
 .gallery1{
     margin-bottom: 30px;
     
+}
+.toast-message{
+    background-color: #71c0b4;
+    color: white;
 }

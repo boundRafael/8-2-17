@@ -11,12 +11,16 @@
 <ion-content class="color" padding="20px">
   
 <!--<img class="animal" src="http://www.animalbehaviorcollege.com/blog/images/how-to-catch-stray-dog.jpg">-->
-<ion-img [src]="pic" *ngIf="pic"></ion-img>
-<div class="help">
- <img class="trash" src="assets/Isai.png"  (click)="deletePhoto(id)"> 
 
-<ion-icon class="alert"  name="alert" (click)="showProfilePage()"> </ion-icon>
+  <ion-spinner class="load" name="ios"> </ion-spinner>
+
+<div *ngFor="let pic of pics">
+  <img class="pictures"[src]="_DomSanitizationService.bypassSecurityTrustUrl(pic)" />
+
+  <div class="help">
+    <img class="trash" src="assets/Isai.png"  (click)="deleteItem(pic)"> 
+    <ion-icon class="alert"  name="alert" (click)="showProfilePage()"> </ion-icon>
+
+  </div>
 </div>
-<button ion-button (click)="presentToast()">
- </button>
 </ion-content>

@@ -12,7 +12,7 @@ import { MapPage } from '../pages/map/map';
 import { GalleryPage } from '../pages/gallery/gallery';
 import { ReportPage } from '../pages/report/report';
 import  { CameraPage } from '../pages/camera/camera';
-
+import {HttpModule} from '@angular/http';
 import {FileTransfer} from '@ionic-native/file-transfer';
 @NgModule({
   declarations: [
@@ -25,7 +25,8 @@ import {FileTransfer} from '@ionic-native/file-transfer';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

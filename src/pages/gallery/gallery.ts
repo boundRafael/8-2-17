@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-import {AlertController } from 'ionic-angular';
+import {AlertController, LoadingController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { ReportPage } from '../report/report';
 import { ToastController } from 'ionic-angular';
+import {Http} from '@angular/http';
+import 'rxjs/add/operator/map';
+import {DomSanitizer} from '@angular/platform-browser';
 
 /**
  * Generated class for the GalleryPage page.
@@ -20,12 +23,56 @@ import { ToastController } from 'ionic-angular';
 export class GalleryPage {
 public photos: any;
 
-public pic:any;
+public pics:any;
 public base64Image : string;
-  constructor( private toastCtrl: ToastController, public navCtrl: NavController, public navParams: NavParams, private camera: Camera, private alertCtrl: AlertController) {
-    this.pic = this.navParams.data[0]
+  constructor(public loadingCtrl: LoadingController, public http: Http,private toastCtrl: ToastController, public navCtrl: NavController, public navParams: NavParams, private camera: Camera, private alertCtrl: AlertController,public _DomSanitizationService: DomSanitizer) {
+    // this.pic = this.navParams.data[0]
+    this.initializePics();
   }
   
+
+initializePics(){
+  this.http.get("https://bound-app.herokuapp.com/pullPhotos").map(res => res.json()).subscribe(data => {
+    this.pics = data.gallery;
+    console.log(this.pics)
+  })
+}
+deleteItem(pic){
+  var index = this.pics.indexOf(pic);
+
+    let confirm = this.alertCtrl.create({
+      title: 'Delete this photo?',
+      message: 'All deleted photos cannot be restored',
+      buttons: [
+        {
+          text: 'No',
+          handler: () => {
+            console.log('Disagree clicked');
+          }
+        },
+        {
+          text: 'Yes',
+          handler: () => {
+             if(index > -1){
+                this.pics.splice(index, 1);
+                        var data = {
+                          img: this.pics
+                    }
+                    console.log(data);
+                    this.http.post("https://bound-app.herokuapp.com/deletePhoto", data).subscribe(function(){
+                      console.log("success");
+                    },function(err){
+                      console.log(err)
+                    });
+              }
+          }
+        }
+      ]
+    });
+    confirm.present();
+  
+
+}
 showProfilePage() {
     this.navCtrl.push(ReportPage);
 
@@ -41,6 +88,9 @@ ngOnInit(){
   this.photos=[];
 
 }
+
+
+
 
 takePhoto(){
 const options: CameraOptions = {
@@ -64,33 +114,33 @@ this
  // Handle error
 });
  
-}
-deletePhoto(index){
+ }
+// deletePhoto(index){
 
-  let confirm = this.alertCtrl.create({
-      title: 'Delete this photo?',
-      message: 'All deleted photos cannot be restored',
-      buttons: [
-        {
-          text: 'No',
-          handler: () => {
-            console.log('Disagree clicked');
-          }
-        },
-        {
-          text: 'Yes',
-          handler: () => {
-           this.photos.splice(index, 1);
-          }
-        }
-      ]
-    });
-    confirm.present();
-  }
+//   let confirm = this.alertCtrl.create({
+//       title: 'Delete this photo?',
+//       message: 'All deleted photos cannot be restored',
+//       buttons: [
+//         {
+//           text: 'No',
+//           handler: () => {
+//             deleteItem(pic){
+//           }
+//         },
+//         {
+//           text: 'Yes',
+//           handler: () => {
+//            this.pics.splice(index, 1);
+//           }
+//         }
+//       ]
+//     });
+//     confirm.present();
+//   }
   
 presentToast() {
   let toast = this.toastCtrl.create({
-    message: 'User was added successfully',
+    message: 'hi',
     duration: 9000,
     position: 'bottom'
   });
@@ -102,5 +152,26 @@ presentToast() {
   toast.present();
 }
 //this.photos.splice(index, 1);
+
+presentLoadingCustom() {
+  let loading = this.loadingCtrl.create({
+    spinner: 'hide',
+    content: `
+      <div class="custom-spinner-container">
+        <div class="custom-spinner-box"></div>
+      </div>`,
+    duration: 5000
+  });
+
+  loading.onDidDismiss(() => {
+    console.log('Dismissed loading');
+  });
+
+  loading.present();
 }
 
+
+
+
+
+}

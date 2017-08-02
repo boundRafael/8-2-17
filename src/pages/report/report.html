@@ -6,26 +6,23 @@
 
 </ion-header>
 
-
-<ion-content  padding>
- <p class="time">
-  542 W Colden Ave 
-</p>
   <p class="date">
-  3:30:27
+  <ion-datetime displayFormat="MM-DD-YYYY hh:mm" [(ngModel)]="today"></ion-datetime>
+
   </p>
+
  <ion-row radio-group>
  
 
       <ion-col>
-          <ion-label class="cat"> Dog <ion-radio class="label1" value="Hello"> </ion-radio></ion-label>
+          <ion-label class="dog1"> Dog <ion-radio  value="Hello"> </ion-radio></ion-label>
         
       
       </ion-col>
 
       <ion-col>
   
-          <ion-label class="cat"> Cat  <ion-radio class="label2" value="hello"> </ion-radio></ion-label>
+          <ion-label class="cat1"> Cat  <ion-radio  value="hello"> </ion-radio></ion-label>
           
       
       </ion-col>
@@ -51,13 +48,13 @@ Description
       </ion-col>
 
       <ion-col>
-          <ion-label class="label"> Yes <ion-radio class="label" value="Hello" > </ion-radio></ion-label>
+          <ion-label class="firstRow"> Yes <ion-radio  value="Hello" > </ion-radio></ion-label>
         
       
       </ion-col>
 
       <ion-col>
-          <ion-label class="label"> No  <ion-radio class="label" value="hello"> </ion-radio></ion-label>
+          <ion-label class="firstRow"> No  <ion-radio  value="hello"> </ion-radio></ion-label>
           
       
       </ion-col>
@@ -73,14 +70,14 @@ Description
       </ion-col>
 
       <ion-col>
-          <ion-label class="label2"> Yes <ion-radio class="label" value="Hello"> </ion-radio></ion-label>
+          <ion-label class="secondRow"> Yes <ion-radio  value="Hello"> </ion-radio></ion-label>
         
       
       </ion-col>
 
       <ion-col>
   
-          <ion-label class="label2"> No  <ion-radio class="label" value="hello"> </ion-radio></ion-label>
+          <ion-label class="secondRow"> No <ion-radio  value="hello"> </ion-radio></ion-label>
           
       
       </ion-col>
@@ -96,9 +93,11 @@ Description
 <div>
 <button ion-button small class="No2"> 4 </button>
 </div> -->
-
+<p class="other">
+    Other
+</p>
  <p class="message2">
-  <input class="input2" type="text" name="Send" value="">
+  <input class="input2" type="text" >
    </p> 
 <button ion-button small class="send" (click)="showAlert()"> Send Alert </button>
 </ion-content>
